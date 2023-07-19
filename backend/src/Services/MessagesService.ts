@@ -51,7 +51,6 @@ class MessageService {
         const promisses: Promise<IMessages | null>[] = input.messages.map(async (message) => messagesDomain.update(input.user, message))
 
         await Promise.all(promisses);
-        return
     }
 }
 

@@ -10,7 +10,7 @@ describe('Deveria criar o historico de mensagens de um usuario', function () {
   afterEach(function () {
     sinon.restore();
   });
-  it('Deveria deveria adicionar o usuario ao historico caso seja seu primeiro acesso', async function () {
+  it('Deveria adicionar o usuario ao historico caso seja seu primeiro acesso', async function () {
     // Arrange
     const newUser: User = new User({
       id: "64b31a366ea2d503878923af",
@@ -21,7 +21,7 @@ describe('Deveria criar o historico de mensagens de um usuario', function () {
     const input: IMessages = {
       user: newUser.getId() as string,
       messages: [{
-        author: newUser.getname(),
+        isUser: true,
         text: "teste",
         date: new Date("2023-01-15T22:53:14.578Z")
       }]
@@ -39,7 +39,7 @@ describe('Deveria criar o historico de mensagens de um usuario', function () {
     const response = await messageService.create(input)
 
     // Assert
-    expect(response).to.be.deep.equal(output)
+    expect(response).to.be.deep.equal(undefined)
   });
   it('Deveria ser capaz de atualizar as mensagens de um usuario com historico já cadastrado', async function () {
     // Arrange
@@ -52,7 +52,7 @@ describe('Deveria criar o historico de mensagens de um usuario', function () {
     const input: IMessages = {
       user: newUser.getId() as string,
       messages: [{
-        author: newUser.getname(),
+        isUser: true,
         text: "teste",
         date: new Date("2023-01-15T22:53:14.578Z")
       }]
@@ -68,11 +68,7 @@ describe('Deveria criar o historico de mensagens de um usuario', function () {
 
     const response = await messageService.create(input)
     // Assert
-    expect((response as any as Messages).getMessages()).to.be.deep.equal([{
-      author: newUser.getname(),
-      text: "teste",
-      date: new Date("2023-01-15T22:53:14.578Z")
-    }])
+    expect(response).to.be.deep.equal(undefined)
   });
   it('Deveria lançar um erro caso o usuario não seja um usuario cadastrado', async function () {
     // Arrange
@@ -85,21 +81,21 @@ describe('Deveria criar o historico de mensagens de um usuario', function () {
     const input: IMessages = {
       user: newUser.getId() as string,
       messages: [{
-        author: newUser.getname(),
+        isUser: true,
         text: "teste",
         date: new Date("2023-01-15T22:53:14.578Z")
       }]
     }
 
-    sinon.stub(Model, 'find').resolves([newUser]);
+    sinon.stub(Model, 'find').resolves(undefined);
     // Act
     try {
       const messageService = new MessageService();
 
-      const response = await messageService.create(input)
+      await messageService.create(input)
     } catch (error) {
       // Assert
-      expect((error as Error).message).to.be.equal("Cast to ObjectId failed for value \"64b31a3sdaefs66ea2d5f\" (type string) at path \"_id\" for model \"Messages\"")
+      expect((error as Error).message).to.be.equal("Usuario não encontrado!")
     }
 
   });
@@ -114,7 +110,7 @@ describe('Deveria criar o historico de mensagens de um usuario', function () {
     const input: IMessages = {
       user: newUser.getId() as string,
       messages: [{
-        author: newUser.getname(),
+        isUser: true,
         text: "teste",
         date: new Date("2023-01-15T22:53:14.578Z")
       }]

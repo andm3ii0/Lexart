@@ -35,9 +35,7 @@ class MessagesODM<T> {
 
     public async update(id: string, message: Message): Promise<T | null> {
         const options = { new: true };
-        const teste = await this.model.findOneAndUpdate({ user: id }, { $push: { messages: message } }, options).exec();
-        return teste
-
+        return this.model.findOneAndUpdate({ user: id }, { $push: { messages: message } }, options);
     }
 }
 
