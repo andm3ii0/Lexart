@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { MessageBubble, MessageContainer } from "../Styles/Message";
-import { OptionsHiddenContent, OptionsLink, OptionsTopic, OptionsVisibleContent, OptionsWrapper } from "../Styles/LoanMessage";
+import { MessageBubble, MessageContainer, MessageText } from "../Styles/Message";
+import { OptionsHiddenContent, OptionsLink, OptionsTopic, OptionsWrapper } from "../Styles/LoanMessage";
 import { topics } from "../data/data";
 
 function LoanMessage({ isuser, text }) {
@@ -17,13 +17,13 @@ function LoanMessage({ isuser, text }) {
     return (
         <MessageContainer isuser={isuser}>
             <MessageBubble isuser={isuser}>
-                {text}
+                <MessageText>
+                    {text}
+                </MessageText>
                 <OptionsWrapper>
                     {topics.map((topic, index) => (
                         <OptionsTopic key={index} onClick={() => handleTopicClick(index)}>
                             {topic.title}
-                            <OptionsVisibleContent>
-                            </OptionsVisibleContent>
                             <OptionsHiddenContent expanded={expandedIndex === index}>
                                 <div dangerouslySetInnerHTML={{ __html: topic.content }} />
                                 {topic.link && (

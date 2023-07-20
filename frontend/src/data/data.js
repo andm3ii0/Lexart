@@ -69,7 +69,7 @@ export const data = {
 
 export const topics = [
     {
-        title: 'Do you want to apply for a loan?',
+        title: '- Do you want to apply for a loan?',
         content: 'More information about applying for a loan.',
         link: {
             text: 'Example Website',
@@ -77,7 +77,7 @@ export const topics = [
         },
     },
     {
-        title: 'Loan conditions',
+        title: '- Loan conditions',
         content: 'Detailed loan conditions.',
         link: {
             text: 'Example Website',
@@ -85,7 +85,7 @@ export const topics = [
         },
     },
     {
-        title: 'Help',
+        title: '- Help',
         content: 'Here you can find helpful information: ',
         link: {
             text: 'Example Website',

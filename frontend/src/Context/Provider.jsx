@@ -81,7 +81,7 @@ function Provider({ children }) {
         }
       }
     }
-    messageObserver()
+    setTimeout(messageObserver, 1000);
   }, [messages])
 
   return (

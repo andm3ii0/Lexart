@@ -1,14 +1,15 @@
 import { BackArrow, HeaderContainer, UserIcon } from "../Styles/Header";
+import logo from '../Images/logo.png';
 
 function Header() {
   return (
     <HeaderContainer>
       <BackArrow />
       <UserIcon>
-        <img src="" alt="User" />
+        <img src={logo} alt="LexArts" />
         <div>
-          <p>Name</p>
-          <p>Description</p>
+          <p>LexArts</p>
+          <p>Arts Everywhere</p>
         </div>
       </UserIcon>
     </HeaderContainer>
