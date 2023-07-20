@@ -34,7 +34,6 @@ Tecnologias Utilizadas
 ----------------------
 
 Frontend
-~~~~~~~~
 
 O frontend foi desenvolvido com as seguintes tecnologias:
 
@@ -47,7 +46,7 @@ O frontend foi desenvolvido com as seguintes tecnologias:
 - ContextAPI: Utilizado para gerenciamento de estado entre os componentes.
 
 Backend
-~~~~~~~
+
 
 O backend foi desenvolvido com as seguintes tecnologias:
 
