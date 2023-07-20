@@ -67,7 +67,7 @@ Para executar o projeto localmente, siga as seguintes etapas:
 
 3. Acesse a pasta do projeto e instale as dependências do frontend e do backend utilizando o comando `npm install` em cada diretório (frontend e backend).
 
-4. Inicie o servidor do backend utilizando o comando `npm start` ou `npm run start` no diretório do backend.
+4. Inicie o servidor do backend utilizando o comando `npm run dev` no diretório do backend.
 
 5. Em seguida, inicie o servidor do frontend utilizando o comando `npm start` no diretório do frontend.
 
