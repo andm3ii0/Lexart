@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import smartphone from '../Images/smartphone.png'
 
 export const ChatPageScrem = styled.div`
   display: flex;
