@@ -1,6 +1,3 @@
-Introdução
-Bem-vindo ao projeto Fullstack "Chatbot e Exportação de Histórico de Conversas". Este sistema foi desenvolvido com o objetivo de permitir aos usuários interagir com um chatbot inteligente, exportar o histórico de conversas e também apresenta um desafio chamado "Cyclotron".
-
 Frontend
 ---------
 Página do Chatbot
