@@ -5,15 +5,15 @@ Frontend
 ---------
 Página do Chatbot
 
-Acesse a página do chatbot, que está pronta para responder a solicitações simples, como "hello", "good", "i want", e "goodbye". Além disso, o chatbot solicita informações de login ou cadastro e fornece opções quando o termo "loan" é mencionado. O histórico de conversas é armazenado quando o usuário menciona "goodbye".
+Acesse a [página do chatbot][https://lexart-beige.vercel.app/], que está pronta para responder a solicitações simples, como "hello", "good", "i want", e "goodbye". Além disso, o chatbot solicita informações de login ou cadastro e fornece opções quando o termo "loan" é mencionado. O histórico de conversas é armazenado quando o usuário menciona "goodbye".
 
 Página de Exportação de Conversas
 
-Para visualizar o histórico de conversas, acesse a página de exportação de conversas. Informe o nome de usuário e a página exibirá o histórico de mensagens. Você também encontrará um botão para exportar o histórico em formato CSV.
+Para visualizar o [histórico de conversas][https://lexart-beige.vercel.app/messages], acesse a página de exportação de conversas. Informe o nome de usuário e a página exibirá o histórico de mensagens. Você também encontrará um botão para exportar o histórico em formato CSV.
 
 Segunda Parte do Teste: Cyclotron
 
-Acesse a página do Cyclotron para testar visualmente a segunda parte do desafio. Essa parte do projeto foi disponibilizada no frontend para permitir que você teste o algoritmo "Cyclotron". A página contém dois campos de entrada para definir o tamanho da matriz e um campo para escolher o tipo de partícula. O resultado do algoritmo será exibido na tela.
+Acesse a página do [Cyclotron][https://lexart-beige.vercel.app/cyclotron] para testar visualmente a segunda parte do desafio. Essa parte do projeto foi disponibilizada no frontend para permitir que você teste o algoritmo "Cyclotron". A página contém dois campos de entrada para definir o tamanho da matriz e um campo para escolher o tipo de partícula. O resultado do algoritmo será exibido na tela.
 
 Backend
 --------
